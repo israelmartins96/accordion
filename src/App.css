@@ -1,38 +1,123 @@
-.App {
+/********* FAQs LOADING *********/
+
+/* Loading */
+.loading {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading h2 {
+  font-size: 2rem;
+  transition: font-size 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 500px) {
+  .loading h2 {
+    font-size: 4rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/********* FAQs *********/
+
+/* FAQs Section */
+.container .faqs-section {
+  width: 90vw;
+  max-width: 920px;
+  background-color: #FEFEFE;
+  padding: 2.5rem 2rem;
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1rem 2rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .container .faqs-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+/* FAQs Section - Main Heading */
+.container .faqs-section .section-heading {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .container .faqs-section .section-heading {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .container .faqs-section .section-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+/* FAQs Section - Single FAQ */
+.container .faqs-section .faqs .faq {
+  border: 2px solid #F1F1F1;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.container .faqs-section .faqs .faq:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.container .faqs-section .faqs .faq:nth-child(n+2) {
+  margin-top: 1rem;
+}
+
+/* FAQs Section - Single FAQ Question */
+.container .faqs-section .faqs .faq header {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: default;
+}
+
+@media screen and (max-width: 660px) {
+  .container .faqs-section .faqs .faq header {
+    font-size: 14px;
+  }
+}
+
+.container .faqs-section .faqs .faq header .question {
+  line-height: 1.5;
+}
+
+/* FAQ Section - Single FAQ Answer Toggle Button */
+.container .faqs-section .faqs .faq header .answer-toggle {
+  width: 2rem;
+  height: 2rem;
+  justify-self: end;
+  align-self: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #52B0C9;
+  background-color: #EFEFEF;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.container .faqs-section .faqs .faq header .answer-toggle:hover {
+  background-color: #EAE6EB;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FAQs Section - Single FAQ Answer */
+.container .faqs-section .faqs .faq .answer {
+  padding: 0 1.5rem 1rem;
+  margin-top: 0.5rem;
 }
