@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Page Container */
 .container {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: rgba(75, 20, 91, 1);
   display: grid;
   place-items: center;
