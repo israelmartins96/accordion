@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   min-height: 100vh;
   background-color: rgba(75, 20, 91, 1);
-  padding: 80px auto;
   display: grid;
   place-items: center;
 }
